@@ -4,9 +4,19 @@ A serverless application that automatically analyzes message sentiment and route
 
 ## Architecture
 ```
-[S3 Upload] → [Lambda Function] → [AWS Comprehend] → [SQS Queues]
-                                                      ├─ High Priority (Negative)
-                                                      └─ Normal Priority (Positive/Neutral)
+S3 (Email Upload)
+   ↓
+Lambda: sentiment_processor
+   ↓
+AWS Comprehend
+   ↓
+DynamoDB (store results)
+   ↓
+SQS
+   ├── HighPriorityQueue (NEGATIVE)
+   ├── NormalQueue (POSITIVE / NEUTRAL)
+   └── DLQ (Failures)
+
 ```
 
 ## Features
