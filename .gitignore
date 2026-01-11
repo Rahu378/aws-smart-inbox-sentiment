@@ -1,0 +1,20 @@
+# Python dependencies - NEVER commit these
+lambda/*/venv/
+lambda/*/site-packages/
+lambda/*/urllib3/
+lambda/*/__pycache__/
+lambda/*/*.pyc
+
+# Sensitive
+.env
+
+# Test files
+*.txt
+negative.txt
+neutral.txt
+happy.txt
+response.json
+test-event.json
+
+# OS
+.DS_Store
