@@ -52,7 +52,3 @@ python monitor_queues.py
 ```bash
 ./cleanup.sh
 ```
-
-## Author
-
-Built following Zero To Cloud's AWS ML project guide.
