@@ -1,4 +1,4 @@
-# AWS Smart Inbox Sentiment Analyzer
+# AWS Smart Inbox Sentiment Analyzer 
 
 A serverless application that automatically analyzes message sentiment and routes them to priority queues.
 
